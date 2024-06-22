@@ -10,7 +10,7 @@ Install dependencies with the following commands:
 
 ```bash
 pip install Flask \
-  SQLAlchemy Flask-SQLAlchemy \
+  SQLAlchemy Flask-SQLAlchemy psycopg2-binary \
   marshmallow marshmallow-sqlalchemy flask-marshmallow \
   pytest pytest-flask
 ```
