@@ -1,20 +1,23 @@
 from config import configs
+from database.models import db
 from flask import Flask
 import os
 
-def determine_config_name():
+def determine_config_name() -> str:
     config_name = os.getenv('PYTHON_ENV')
     if config_name is None:
         return 'development'
     return config_name
 
-def create_app(config_name):
+def create_app(config_name = None) -> Flask:
+    if config_name is None:
+        config_name = determine_config_name()
     app = Flask(__name__)
     print('Creating app with config ' + config_name)
     app.config.from_object(configs[config_name])
+    db.init_app(app)
     return app
 
 if __name__ == '__main__':
-    config_name = determine_config_name()
-    app = create_app(config_name)
+    app = create_app()
     app.run(debug=True)

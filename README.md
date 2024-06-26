@@ -20,3 +20,11 @@ pip install Flask \
 This application requires a configuration file named `config.py` in order to run.
 There is an example configuration file named `config.py.example` that you can rename
 or copy and customize for your needs.
+
+**TODO** Talk about default config being `development`. It can be controlled with the `PYTHON_ENV` environment variable.
+
+To set up the database, please run the [`initialize_db.py`](./scripts/initialize_db.py) script.
+
+```bash
+python3 -m scripts.initialize_db
+```
