@@ -1,0 +1,18 @@
+# Instructions:
+#
+# Copy this file, giving it the name 'config.py'.
+# Then, customize the configuration as needed.
+
+class Config:
+    TESTING = False
+    SQLALCHEMY_DATABASE_URI = 'postgresql://my_user@/my_database?host=/var/run/postgresql'
+
+class ConfigTest(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'postgresql://my_user@/my_database_test?host=/var/run/postgresql'
+
+configs = {
+    'development': Config(),
+    'production': Config(),
+    'testing': ConfigTest(),
+}

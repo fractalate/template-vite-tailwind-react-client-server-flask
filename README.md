@@ -14,3 +14,9 @@ pip install Flask \
   marshmallow marshmallow-sqlalchemy flask-marshmallow \
   pytest pytest-flask
 ```
+
+## Setup
+
+This application requires a configuration file named `config.py` in order to run.
+There is an example configuration file named `config.py.example` that you can rename
+or copy and customize for your needs.
