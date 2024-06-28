@@ -17,11 +17,15 @@ pip install Flask \
 
 ## Setup
 
-This application requires a configuration file named `config.py` in order to run.
+This application requires a configuration file named `config.py` in order to run which you will have to create yourself.
 There is an example configuration file named `config.py.example` that you can rename
 or copy and customize for your needs.
 
-**TODO** Talk about default config being `development`. It can be controlled with the `PYTHON_ENV` environment variable.
+The application can run in several different modes which are controllable with the `PYTHON_ENV`:
+
+* `development` (default) - Run the server in development mode with hot reloading.
+* `production` - Run the server in production mode.
+* `test` - Run the server in testing mode. This is the mode that is used during tests, you shouldn't use it directly.
 
 To set up the database, please run the [`initialize_db.py`](./scripts/initialize_db.py) script.
 
