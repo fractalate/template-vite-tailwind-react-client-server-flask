@@ -2,6 +2,8 @@ from config import configs
 from database.models import db
 from flask import Flask
 from routes.api import api_bp
+from routes.dev_proxy import dev_proxy_bp
+from ws.socketio import setup_socketio
 
 import os
 
@@ -20,6 +22,8 @@ def create_app(config_name = None) -> Flask:
     app.config.from_object(configs[config_name])
 
     app.register_blueprint(api_bp, url_prefix='/api')
+    setup_socketio(app)
+    app.register_blueprint(dev_proxy_bp)
     db.init_app(app)
 
     return app

@@ -13,11 +13,11 @@ def app():
     yield app
 
 def test_api(client):
-    rv = client.get('/api/test')
+    rv = client.get('/api/test/ping')
     assert rv.status_code == 200
     json.loads(rv.data)
 
 def test_database(client):
-    rv = client.get('/api/test_database')
+    rv = client.get('/api/test/pg')
     assert rv.status_code == 200
     json.loads(rv.data)

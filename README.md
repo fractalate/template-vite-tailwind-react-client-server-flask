@@ -12,6 +12,8 @@ Install dependencies with the following commands:
 pip install Flask \
   SQLAlchemy Flask-SQLAlchemy psycopg2-binary \
   marshmallow marshmallow-sqlalchemy flask-marshmallow \
+  requests \
+  flask-socketio \
   pytest pytest-flask
 ```
 
@@ -31,6 +33,20 @@ To set up the database, please run the [`initialize_db.py`](./scripts/initialize
 
 ```bash
 python3 -m scripts.initialize_db
+```
+
+The client requires its dependencies to be installed. To do this, navigate to the [client](client/) directory and run the following commands:
+
+```bash
+npm install .
+```
+
+## Development
+
+To run the application in development mode, run the provided `dev-client-server.sh` script:
+
+```bash
+./dev-client-server.sh
 ```
 
 ## Testing
