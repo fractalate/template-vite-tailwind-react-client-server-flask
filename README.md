@@ -25,10 +25,20 @@ The application can run in several different modes which are controllable with t
 
 * `development` (default) - Run the server in development mode with hot reloading.
 * `production` - Run the server in production mode.
-* `test` - Run the server in testing mode. This is the mode that is used during tests, you shouldn't use it directly.
+* `testing` - Run the server in testing mode. This is the mode that is used during tests, you shouldn't use it directly.
 
 To set up the database, please run the [`initialize_db.py`](./scripts/initialize_db.py) script.
 
 ```bash
 python3 -m scripts.initialize_db
 ```
+
+## Testing
+
+You can run the included tests with the following commands:
+
+```bash
+python3 -m pytest tests
+```
+
+Be sure to create the database configured for `testing` in your `config.py` before running the tests.
