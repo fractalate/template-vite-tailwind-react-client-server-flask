@@ -2,8 +2,6 @@
 
 This is a TypeScript/Python template project which contains a Python Flask backend and a Vite, Tailwind, React frontend.
 
-**TODO** Keep this in-line with the other template project. Need a startup procedure.
-
 ## Dependencies
 
 Install dependencies with the following commands:
